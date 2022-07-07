@@ -58,7 +58,7 @@ class RPS
 
 	public boolean BetCoin(int bet,Coin cup)
 	{
-		if (! cup.PullCoin(bet))
+		if (! cup.PullCoin(bet) || bet == 0)
 		{
 			return false;
 		}

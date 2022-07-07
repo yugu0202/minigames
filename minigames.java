@@ -51,6 +51,10 @@ class minigames
 					break;
 				}
 			}
+			else
+			{
+				System.out.println("ベット失敗…もう一度お願いします");
+			}
 		}
 
 		return;
