@@ -19,25 +19,25 @@ class Coin
 	}
 
 
-	public void SetName(String name)
-	{
-		List<String> lines = GetData();
-	}
-
-
-	private List<String> GetData()
-	{
-		Path path = Paths.get("./usrdata.txt");
-		File file = path.toFile();
-		BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8));
-		String str;
-
-		List<String> lines = new ArrayList<>();
-		while ((str = reader.readLine()) != null)
-		{
-			lines.add(str);
-		}
-	}
+//	public void SetName(String name)
+//	{
+//		List<String> lines = GetData();
+//	}
+//
+//
+//	private List<String> GetData()
+//	{
+//		Path path = Paths.get("./usrdata.txt");
+//		File file = path.toFile();
+//		BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8));
+//		String str;
+//
+//		List<String> lines = new ArrayList<>();
+//		while ((str = reader.readLine()) != null)
+//		{
+//			lines.add(str);
+//		}
+//	}
 
 
 	private boolean PullCoin(int coin)
