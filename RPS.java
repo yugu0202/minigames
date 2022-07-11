@@ -10,6 +10,7 @@ class RPS
 	private HashMap<Integer,String> handMap;
 	private HashMap<Integer,String> resultMap;
 
+
 	RPS()
 	{
 		this.count = 0;
@@ -30,6 +31,7 @@ class RPS
 			}
 		};
 	}
+
 
 	public int Battle(int hand) //0 draw,1 win,2 lose
 	{
@@ -56,47 +58,27 @@ class RPS
 		}
 	}
 
-	public boolean BetCoin(int bet,Coin cup)
-	{
-		if (! cup.PullCoin(bet) || bet == 0)
-		{
-			return false;
-		}
-		this.coin += bet;
-		return true;
-	}
-
-	public int GetReward(Coin cup)
-	{
-		int reward = (this.count+1)*this.coin;
-		this.count = 0;
-		this.coin = 0;
-		cup.AddCoin(reward);
-		return reward;
-	}
 
 	public String ConvertResult(int result)
 	{
 		return this.resultMap.get(result);
 	}
 
+
 	public String EnemyHandName()
 	{
 		return this.handMap.get(this.enemyHand);
 	}
+
 
 	public String HandName(int hand)
 	{
 		return this.handMap.get(hand);
 	}
 
+
 	public int GetCount()
 	{
 		return this.count;
-	}
-
-	public int SchReward()
-	{
-		return this.coin*(this.count+1);
 	}
 }
