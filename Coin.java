@@ -1,6 +1,9 @@
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.PrintWriter;
+import java.io.Path;
+import java.io.File;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
+import java.io.IOException;
 
 class Coin
 {
@@ -8,10 +11,32 @@ class Coin
 	private int betCoin;
 	private String name;
 
+
 	Coin() {
 		this.coin = 20;
 		this.betCoin = 0;
 		this.name = "guest";
+	}
+
+
+	public SetName(String name)
+	{
+		List<String> lines = GetData();
+	}
+
+
+	private List<String> GetData()
+	{
+		Path path = Paths.get("./usrdata.txt");
+		File file = path.toFile();
+		BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8));
+		String str;
+
+		List<String> lines = new ArrayList<>();
+		while ((str = reader.readLine()) != null)
+		{
+			lines.add(str);
+		}
 	}
 
 

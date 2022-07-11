@@ -12,7 +12,7 @@ class minigames
 		{
 			System.out.println("名前を入力してね");
 			String name = scan.nextLine();
-			if (name.indexOf(":") == -1)
+			if (name.indexOf(":") != -1)
 			{
 				System.out.println("名前に使用できない文字が含まれています(:)");
 			}
