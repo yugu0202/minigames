@@ -2,14 +2,12 @@ import java.util.Random;
 
 class HL
 {
-	private int coin;
 	private int count;
 	private int[] card;
 	private int ans;
 
 	HL()
 	{
-		this.coin = 0;
 		this.count = 0;
 		this.card = new int[2];
 		this.ans = 0;
@@ -30,7 +28,7 @@ class HL
 		return this.card[0];
 	}
 
-	public Boolean Choice(int player)
+	public boolean Choice(int player)
 	{
 		if (this.ans == player) 
 		{

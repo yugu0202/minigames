@@ -14,6 +14,7 @@ class RPS
 	RPS()
 	{
 		this.count = 0;
+		this.enemyHand = 0;
 		this.handMap = new HashMap<Integer,String>()
 		{
 			{
@@ -41,12 +42,12 @@ class RPS
 		{
 			return 0;
 		}
-		else if (hand-this.enemyHand == 1 || hand-this.enemyHand == 2)
+		else if (hand-this.enemyHand == 1 || hand-this.enemyHand == -2)
 		{
 			this.count++;
 			return 1;
 		}
-		else if (this.enemyHand-hand == 1 || this.enemyHand-hand == 2)
+		else if (this.enemyHand-hand == 1 || this.enemyHand-hand == -2)
 		{
 			this.count = 0;
 			this.coin = 0;
