@@ -19,7 +19,7 @@ class Coin
 	}
 
 
-	public SetName(String name)
+	public void SetName(String name)
 	{
 		List<String> lines = GetData();
 	}
