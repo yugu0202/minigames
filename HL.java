@@ -17,6 +17,7 @@ class HL
 
 	public int GameStart()
 	{
+		this.card = new int[2];
 		Random rand = new Random();
 		while (this.card[0] == this.card[1])
 		{
